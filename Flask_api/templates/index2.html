@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Tube Snacher</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+
+<body>
+    <div class="container centered-container">
+        <form id="downloadForm" method="post" class="input-card">
+            <div class="input-wrapper">
+                <input type="text" name="url" id="urlInput" placeholder="Paste Your URL..." required>
+                <select>
+                    <option value="1080P">1080P</option>
+                    <option value="720p">720p</option>
+                </select>
+                <button type="submit" class="button">Download</button>
+            </div>
+        </form>
+
+        <div class="content-card">
+            <div class="content">
+                <div class="image">
+                    <img src="https://i.imgur.com/5v9z7zB.jpg" alt="Album Cover" width="200">
+                </div>
+                <div class="options">
+                    <div class="option">
+                        <span>720p HD Video, 1.2 GB</span>
+                        <button>Download</button>
+                    </div>
+                    <div class="option">
+                        <span>720p HD Video, 1.2 GB</span>
+                        <button>Download</button>
+                    </div>
+                    <div class="option">
+                        <span>720p HD Video, 1.2 GB</span>
+                        <button>Download</button>
+                    </div>
+                </div>
+            </div>
+            <div class="description">
+                Best Of Karan Johar | Audio Jukebox | Kuch Kuch Hota Hai | Ae Dil Hai Mushkil | Student of The Year
+            </div>
+        </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="script.js"></script>
+</body>
+
+</html>
