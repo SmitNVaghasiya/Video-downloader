@@ -4,7 +4,7 @@
 <head>
     <title>Tube Snacher</title>
     <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='styles.css') }}">
-    <!-- <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script> -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 </head>
 
 <body>
@@ -25,8 +25,8 @@
             </div>
         </form>
     </div>
-    
-    <div class="container below-container">
+
+    <div class="container below-container hidden">
         <div class="content">
             <div class="content-card">
                 <div class="image picture-card">
@@ -41,39 +41,14 @@
                     <span>720p HD Video, 1.2 GB</span>
                     <button>Download</button>
                 </div>
-                <div class="option">
-                    <span>720p HD Video, 1.2 GB</span>
-                    <button>Download</button>
-                </div>
-                <div class="option">
-                    <span>720p HD Video, 1.2 GB</span>
-                    <button>Download</button>
-                </div>
-                <div class="option">
-                    <span>720p HD Video, 1.2 GB</span>
-                    <button>Download</button>
-                </div>
-                <div class="option">
-                    <span>720p HD Video, 1.2 GB</span>
-                    <button>Download</button>
-                </div>
-                <div class="option">
-                    <span>720p HD Video, 1.2 GB</span>
-                    <button>Download</button>
-                </div>
-                <div class="option">
-                    <span>720p HD Video, 1.2 GB</span>
-                    <button>Download</button>
-                </div>
-                <div class="option">
-                    <span>720p HD Video, 1.2 GB</span>
-                    <button>Download</button>
-                </div>
             </div>
         </div>
     </div>
 
+    <div id="responseContainer"></div> <!-- Add this element for displaying the response -->
+
     <script src="{{ url_for('static', filename='script.js') }}"></script>
+
 </body>
 
 </html>
