@@ -4,16 +4,19 @@
 <head>
     <title>Tube Snacher</title>
     <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='styles.css') }}">
+    <!-- <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script> -->
 </head>
 
 <body>
-    <!-- <h1 style="margin-top:25px;">
-        <pre>Download HD resolution Videos</pre>
+    <!-- To add any message on the top of the screen -->
+    <!-- <h1>
+        <pre>Download Videos at HD resolution </pre>
     </h1> -->
     <div class="container above-center">
-        <form id="downloadForm" method="post">
+        <form id="downloadForm">
             <div class="input-wrapper">
                 <input type="text" name="url" id="urlInput" placeholder="Paste Your URL..." required>
+                <!-- Going to use toggle button to show features like downloading Mp3 -->
                 <!-- <select class="toggle">
                     <option value="1080P">1080P</option>
                     <option value="720p">720p</option>
@@ -22,13 +25,12 @@
             </div>
         </form>
     </div>
-
+    
     <div class="container below-container">
         <div class="content">
             <div class="content-card">
                 <div class="image picture-card">
-                    <img src=" {{ url_for('static', filename='Screenshot 2024-07-31 154626.png') }}" alt="Album Cover"
-                        width="300">
+                    <img src="{{ url_for('static', filename='Screenshot 2024-07-31 154626.png') }}" alt="Album Cover">
                 </div>
                 <div class="description-card description">
                     Best Of Karan Johar | Audio Jukebox | Kuch Kuch Hota Hai | Ae Dil Hai Mushkil | Student of The Year
@@ -36,12 +38,28 @@
             </div>
             <div class="download-card options">
                 <div class="option">
-                    <div class="option-card">
-                        <span>720p HD Video, 1.2 GB</span>
-                    </div>
-                    <div>
-                        <button>Download</button>
-                    </div>
+                    <span>720p HD Video, 1.2 GB</span>
+                    <button>Download</button>
+                </div>
+                <div class="option">
+                    <span>720p HD Video, 1.2 GB</span>
+                    <button>Download</button>
+                </div>
+                <div class="option">
+                    <span>720p HD Video, 1.2 GB</span>
+                    <button>Download</button>
+                </div>
+                <div class="option">
+                    <span>720p HD Video, 1.2 GB</span>
+                    <button>Download</button>
+                </div>
+                <div class="option">
+                    <span>720p HD Video, 1.2 GB</span>
+                    <button>Download</button>
+                </div>
+                <div class="option">
+                    <span>720p HD Video, 1.2 GB</span>
+                    <button>Download</button>
                 </div>
                 <div class="option">
                     <span>720p HD Video, 1.2 GB</span>
@@ -53,7 +71,6 @@
                 </div>
             </div>
         </div>
-
     </div>
 
     <script src="{{ url_for('static', filename='script.js') }}"></script>

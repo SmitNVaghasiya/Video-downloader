@@ -7,31 +7,34 @@ app = Flask(__name__)
 @app.route('/')
 def index():
     return render_template('index2.html')
-    # return render_template('index.html')
+    return render_template('index.html')
 
 
 @app.route('/download', methods=['GET'])
 def download():
-    url = request.form.get('url')
-    print(url)
-    directory = '/path/to/temp'
-    if not os.path.exists(directory):
-        os.makedirs(directory)
-    
-    # Download video
+    url = request.args.get('url')  # Use request.args for GET parameters
+    if not url:
+        return jsonify({'error': 'URL parameter is required'}), 400
+
+    directory = 'temp'  # You can use a relative path or configure as needed
+
     filename, error = download_video(url, directory)
     
     if error:
         return jsonify({'error': error}), 400
 
-    # Return the filename for download URL construction
     return jsonify({'filename': filename})
 
 @app.route('/download_file/<filename>')
 def download_file(filename):
-    directory = '/path/to/temp'
+    directory = 'temp'
+    filepath = os.path.join(directory, filename)
+    
+    if not os.path.isfile(filepath):
+        return jsonify({'error': 'File not found'}), 404
+
     return send_file(
-        os.path.join(directory, filename),
+        filepath,
         as_attachment=True,
         download_name=filename
     )
