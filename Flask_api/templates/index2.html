@@ -26,26 +26,26 @@
         </form>
     </div>
 
+    <div class="loading-container">
+        <h2 id="loadingtext">Wait for details to be featched</h2>
+        <div class="loading-circle" id="loadingCircle"></div>
+    </div>
+
     <div class="container below-container hidden">
         <div class="content">
             <div class="content-card">
                 <div class="image picture-card">
-                    <img src="{{ url_for('static', filename='Screenshot 2024-07-31 154626.png') }}" alt="Album Cover">
+                    <img src="" alt="Album Cover" id="videoThumbnail">
                 </div>
-                <div class="description-card description">
-                    Best Of Karan Johar | Audio Jukebox | Kuch Kuch Hota Hai | Ae Dil Hai Mushkil | Student of The Year
+                <div class="description-card description" id="videoDescription">
                 </div>
             </div>
             <div class="download-card options">
-                <div class="option">
-                    <span>720p HD Video, 1.2 GB</span>
-                    <button>Download</button>
-                </div>
             </div>
         </div>
     </div>
 
-    <div id="responseContainer"></div> <!-- Add this element for displaying the response -->
+    <!-- <div id="responseContainer"></div> -->
 
     <script src="{{ url_for('static', filename='script.js') }}"></script>
 
